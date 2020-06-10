@@ -1,0 +1,8 @@
+FROM node:10
+LABEL maintainer="bilalsulehri@gmail.com"
+COPY . /src
+WORKDIR /src
+RUN npm install 
+EXPOSE 9080
+ENV PORT=9080
+CMD ["npm","start"]
